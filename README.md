@@ -1,0 +1,1 @@
+# multiplicador_soma_desloca
