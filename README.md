@@ -11,19 +11,26 @@
 - [Especificações](#especificaçoes)
   * [Diagrama ASM](#diagrama-asm)
   * [Diagrama de Blocos](#diagrama-de-blocos)
-  * [Design](#design)
+  * [Diagrama de Estados](#diagrama-de-estados)
 
 
 ## Especificações
-
-This is an h1 heading
+Usando a linguagem de descrição de hardware Verilog, descrever um multiplicador soma e desloca (Shift and Adder), utilizando a abordagem descendente. Para os módulos, utilizar a descrição comportamental, e para o módulo principal, utilizar a descrição estrutural.
 
 ### Diagrama ASM
 
-This is an h2 heading
+<div align="center">
+  <img src="https://i.ibb.co/wWC7ffS/diagrama-ASM.png" alt="Diagrama ASM">
+</div>
 
 ### Diagrama de Blocos
 
-This is an h3 heading
+<div align="center">
+  <img src="https://i.ibb.co/PQBsFxr/diagrama-blocos.png" alt="Diagrama de Blocos">
+</div>
 
-### Design
+### Diagrama de Estados
+
+<div align="center">
+  <img src="https://i.ibb.co/7v0FTwb/diagrama-estados.png" alt="Diagrama de Estados">
+</div>
