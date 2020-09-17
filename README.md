@@ -8,50 +8,22 @@
 #### <div align="center">Professor Odilon de Oliveira Dutra</div>
 
 
-- [Especificações](#heading)
-  * [Diagrama ASM](#diagramaa)
-  * [Diagrama de Blocos](#diagramab)
-  * [Design](#design)
+- [Especificações](#Especificações)
+  * [Diagrama ASM](#Diagrama ASM)
+  * [Diagrama de Blocos](#Diagrama de Blocos)
+  * [Design](#Design)
 
 
-# Heading levels
-
-> This is a fixture to test heading levels
-
-<!-- toc -->
-
-## Heading
+## Especificações
 
 This is an h1 heading
 
-### Sub-heading
+### Diagrama ASM
 
 This is an h2 heading
 
-#### Sub-sub-heading
+### Diagrama de Blocos
 
 This is an h3 heading
 
-## Heading
-
-This is an h1 heading
-
-### Sub-heading
-
-This is an h2 heading
-
-#### Sub-sub-heading
-
-This is an h3 heading
-
-## Heading
-
-This is an h1 heading
-
-### Sub-heading
-
-This is an h2 heading
-
-#### Sub-sub-heading
-
-This is an h3 heading
+### Design
