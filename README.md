@@ -8,10 +8,10 @@
 #### <div align="center">Professor Odilon de Oliveira Dutra</div>
 
 
-- [Especificações](#Especificações)
-  * [Diagrama ASM](#Diagrama ASM)
-  * [Diagrama de Blocos](#Diagrama de Blocos)
-  * [Design](#Design)
+- [Especificações](#especificaçoes)
+  * [Diagrama ASM](#diagrama-asm)
+  * [Diagrama de Blocos](#diagrama-de-blocos)
+  * [Design](#design)
 
 
 ## Especificações
