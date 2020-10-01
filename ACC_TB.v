@@ -19,23 +19,37 @@ module ACC_TB();
 initial begin
    entrada = 9'b1_0101_1101;
 	$display("Entrada = %b", entrada);
-	load = 1;
+	//clock inicial
+	clk = 0;
+	#5 clk = !clk;
+   #5 clk = !clk;
+	///////////////////////////////////////////////////
+	$display("Carregando os 4 bits LSB e 0 no resto");
+	load = 1; 
 	sh = 0;
 	ad = 0;
-	clk = 0;
+	//////////////////////////////////////////////////
    #5 clk = !clk;
    #5 clk = !clk;
    $display("load = %d ", load, " sh = %d ", sh, " ad = %d ", ad, "SAIDA = %b ", saida);
+	//////////////////////////////////////////////////
+	
+	$display("Carrega a entrada nos 5 MSB e mantem o resto");
 	load = 0;
 	ad = 1;
 	#5 clk = !clk;
    #5 clk = !clk;
 	$display("load = %d ", load, " sh = %d ", sh, " ad = %d ", ad, "SAIDA = %b ", saida);
+	///////////////////////////////////////////////////
+	
+	$display("Realizando shift para a direita na saida");
 	ad = 0;
 	sh = 1;
-	#5 clk = !clk;
-	#5 clk = !clk;
-	$display("load = %d ", load, " sh = %d ", sh, " ad = %d ", ad, "SAIDA = %b ", saida);
+	for(i=0;i<9;i=i+1) begin
+		#5 clk = !clk;
+		#5 clk = !clk;
+		$display("load = %d ", load, " sh = %d ", sh, " ad = %d ", ad, "SAIDA = %b ", saida);
+	end
 end
 
 		

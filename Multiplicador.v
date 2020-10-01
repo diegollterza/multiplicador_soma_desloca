@@ -14,8 +14,8 @@ module Multiplicador(multiplicando, multiplicador, st, clk, done, idle, produto)
 	wire k,load, sh, ad;
 	
 
-	// Hierarquia
-	
+	// Hierarquia Top-Down
+
 	Control control(produto[0], st, clk, k, idle, done, load, sh, ad);
 	Counter counter(load,clk,k);
 	Adder adder(multiplicando, produto[7:4],soma);

@@ -11,7 +11,9 @@ module Control(m, st, clk, k, idle, done, load, sh, ad);
 	
 	parameter S0 = 0, S1 = 1, S2 = 2, S3 = 3;
 	
-	// Output depends only on the state
+	//Maquina de estados especificada no trabalho
+	
+	// Saidas que dependem somente dos estados
 	always @ (state) begin
 		case (state)
 			S0:
@@ -41,7 +43,7 @@ module Control(m, st, clk, k, idle, done, load, sh, ad);
 		endcase
 	end
 
-	// Determine the next state
+	// Determinaçao dos proximos estados
 	always @ (posedge clk) begin
 		case (state)
 			S0:
@@ -58,6 +60,7 @@ module Control(m, st, clk, k, idle, done, load, sh, ad);
 		endcase
 	end
 
+	//Saidas que dependem da entrada e do estado
 	always@(*) begin
 		case (state)
 			S0:

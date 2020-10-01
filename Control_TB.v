@@ -4,7 +4,7 @@ module Control_TB();
 	reg st, clk, k, m;
 	reg [1:0] state;
 	wire done, idle, load, sh, ad;
-	
+	integer i;
 	
 	Control DUT(
 	.m(m), 
@@ -24,43 +24,21 @@ initial begin
 	clk = 0;
 	k = 0;
 	m = 0;
+	//clock inicial
 	#5 clk = !clk;
 	#5 clk = !clk;
-	$display("State = %d", state, " idle = %b ", idle, " sh = %d ", sh, " ad = %d", ad, " m = %d", m, " K = %d", k);
-	st = 1;
-	#5 clk = !clk;
-	#5 clk = !clk;
-	$display("State = %d", state, " idle = %b ", idle, " sh = %d ", sh, " ad = %d", ad, " m = %d", m, " K = %d", k);
-	st = 0;
-	#5 clk = !clk;
-	#5 clk = !clk;
-	$display("State = %d", state, " idle = %b ", idle, " sh = %d ", sh, " ad = %d", ad, " m = %d", m, " K = %d", k);
-	#5 clk = !clk;
-	#5 clk = !clk;
-	$display("State = %d", state, " idle = %b ", idle, " sh = %d ", sh, " ad = %d", ad, " m = %d", m, " K = %d", k);
-	m = 1;
-	#5 clk = !clk;
-	#5 clk = !clk;
-	$display("State = %d", state, " idle = %b ", idle, " sh = %d ", sh, " ad = %d", ad, " m = %d", m, " K = %d", k);
-	#5 clk = !clk;
-	#5 clk = !clk;
-	$display("State = %d", state, " idle = %b ", idle, " sh = %d ", sh, " ad = %d", ad, " m = %d", m, " K = %d", k);
-	k = 1;
-	#5 clk = !clk;
-	#5 clk = !clk;
-	$display("State = %d", state, " idle = %b ", idle, " sh = %d ", sh, " ad = %d", ad, " m = %d", m, " K = %d", k);
-	#5 clk = !clk;
-	#5 clk = !clk;
-	$display("State = %d", state, " idle = %b ", idle, " sh = %d ", sh, " ad = %d", ad, " m = %d", m, " K = %d", k);
-	#5 clk = !clk;
-	#5 clk = !clk;
-	$display("State = %d", state, " idle = %b ", idle, " sh = %d ", sh, " ad = %d", ad, " m = %d", m, " K = %d", k);
-	#5 clk = !clk;
-	#5 clk = !clk;
-	$display("State = %d", state, " idle = %b ", idle, " sh = %d ", sh, " ad = %d", ad, " m = %d", m, " K = %d", k);
-	#5 clk = !clk;
-	#5 clk = !clk;
-	$display("State = %d", state, " idle = %b ", idle, " sh = %d ", sh, " ad = %d", ad, " m = %d", m, " K = %d", k);
+	
+	//testando estados, dependendo da entrada
+	//entradas aleatorias
+	for(i=0;i<20;i=i+1) begin
+		st = $random % 2;
+		m = $random % 2;
+		k = $random % 2;
+		$display("Entradas: start = %b",st," m = %d", m, " k = %d",k);
+		#5 clk = !clk;
+		#5 clk = !clk;
+		$display("State = %d", state, " idle = %b ", idle, " sh = %d ", sh, " ad = %d", ad, " m = %d", m, " K = %d", k);
+	end
 end
 
 initial   begin
